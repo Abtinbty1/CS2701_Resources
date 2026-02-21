@@ -33,14 +33,15 @@ public class Order {
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="buyer")
     private User buyer;
-
+     
 
     public Order() {
     }
 
 
-    public Order(User buyer) {
+    public Order(User buyer, Date date) {
         this.buyer = buyer;
+        this.Date = date;
     }
 
 
